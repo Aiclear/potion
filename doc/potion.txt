@@ -1,0 +1,141 @@
+*potion.txt*    functionality for the potion programming language
+
+                ____        __  _               ~
+               / __ \____  / /_(_)___  ____     ~
+              / /_/ / __ \/ __/ / __ \/ __ \    ~
+             / ____/ /_/ / /_/ / /_/ / / / /    ~
+            /_/    \____/\__/_/\____/_/ /_/     ~
+      Functionality for the Potion programing language.
+    Includes syntax highlighting, code folding, and more!
+===============================================================
+CONTENTS                                         *PotionContents*
+    
+    1. Usage .................... |PotionUsage|
+        1.1 Syntax .............. |PotionSyntax|
+        1.2 Fold ................ |PotionFold|
+        1.3 Run ................. |PotionRun|
+        1.4 Section ............. |Potionsection|
+    2. Mappings ................. |PotionMappings|
+    3. License .................. |PotionLicense|
+    4. Bugs ..................... |PotionBugs|
+    5. Contributing ............. |PotionContributing|
+    6. Changelog ................ |PotionChangelog|
+    7. Credits .................. |PotionCredits|
+
+===============================================================
+Section 1: Usage                                  *PotionUsage*
+
+---------------------------------------------------------------
+1.1 Syntax                                       *PotionSyntax*
+
+This plugin with automatically provide syntax highligting for
+Potion fiels (files ending in .pn).
+
+---------------------------------------------------------------
+1.2 Fold                                           *PotionFold*
+
+Evey time you open a Potion fiel, you will see the results of the folding.vim
+work. In this plugin fold method is expression.
+
+Folding Result
+--------------
+
+    Code Example:                           Fold Code:
+
+        factorial = (n):                    +-- 5 lines: factorial = (n):----
+            total = 1                                      .
+            n to 1 (i):                                    .
+                total *= i.                         noly a blank line
+            total.              Fold Work                  .
+                                --------->                 .
+        10 times (i):                       +-- 5 lines: 10 times (i):-------
+            i string print
+            '! is: ' print
+            factorial (i) string print
+            "\n" print.
+
+Every function name as a fold mark, it makes fold conntins more easy to know.
+If you want to open this fold, only use vim's command about fold.
+
+Forexample:
+    zc      :close fold
+    zo      :open fold
+    zr/R    :reduce fold / open all fold
+    zm/M    :more fold / close all fold
+
+---------------------------------------------------------------
+1.3 Run                                             *PotionRun*
+
+When you have completed your code, you don't need to extra ways run your code,
+just press key that you will get you want to get result. Your code running
+result will display in a split window under your code window. And here, you
+also can get your Potion code's bytecode, this also easy to get and the same
+way, but different key you need press.The result will display in right split
+window, I haved set a name(__Potion_Bytecode__) for this buffer.The bytecode
+filetype is set to potionbytecode and provided a syntax file for you can more
+easily view files content.If your code have some bug, potion complier's error 
+info will display for you.
+
+---------------------------------------------------------------
+1.4 Section                                     *PotionSection*
+
+Here define some map that can make you more easily jump with section.
+
+
+===============================================================
+Section 2: Mappings                              *PotionMappings*
+
+<localleader>r      --> This map will complie your code, and it can automati-
+                        lly save your changes.
+<localleader>b      --> It will generation your potion files' bytecode.
+                        (If you don't want to use localleader, that you can 
+                        open ~/.vim/../potion/ftplugin/potion/section.vim mo-
+                        dify it.)
+nnoremap    [[      --> Jump between the section.
+            ]]
+            []
+            ][      --> The same function, but different directino.
+
+
+===============================================================
+Section 3: License                              *PotionLicense*
+
+The Potion is released under MIT/X11.
+
+
+===============================================================
+Section 4: Bugs                                     *PotionBugs*
+
+Please report any bugs you may find on the GitHub issue tracker:
+
+    http://github.com/Aiclear/potion/issues
+
+
+===============================================================
+Section 5: Contributing                      *PotionContributing*
+
+If you have some better idears for this plugin, always welcome.
+
+Fork the project on GitHub and send a pull request.
+
+    http://github.com/Aiclear/potion
+
+
+===============================================================
+Section 6: Changelog                           *PotionChangelog*
+
+v0.1.0
+    * nothing
+
+
+===============================================================
+Section 7: Credits                               *PotionCredits*
+
+Potion just i want to learn vimscripts knowledge, I want to thank the open
+source professionals. They give us a wealth of learnig materials.
+
+
+===============================================================
+
+
+    vim:tw=78:ts=4:sts=4:sw=4:et:help:nor: 
